@@ -2,6 +2,8 @@ package me.mingxing5212.chaihens.merchant;
 
 import me.mingxing5212.chaihens.merchant.data.MerchantMapper;
 import org.mybatis.spring.annotation.MapperScan;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
