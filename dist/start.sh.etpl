@@ -1,0 +1,13 @@
+#!/bin/bash
+env > environment.log
+APPID="chai-hens-merchant"
+chmod 600 /data/${APPID}/config/application.yml
+LOG_DIR="/data/log/${APPID}"
+GC_LOG="${LOG_DIR}/gc.log"
+VM_OPTION_GC_LOG="-Xloggc:${GC_LOG} -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:+PrintGCDetails"
+VM_OPTION_GC_ALG="-XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:CMSInitiatingOccupancyFraction=60 -XX:CMSTriggerRatio=70"
+VM_OPTION_MEM="{{_ .VM_OPTION_MEM}} -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${LOG_DIR}/"
+VM_OPTION_DEBUG="{{_ .VM_OPTION_DEBUG}}"
+VM_OPTION_RUN="-DLOG_DIR=${LOG_DIR} -DAPPID=${APPID} -Delog.config=config/elog.xml -jar ebox-app.jar"
+export LANG="en_US.UTF-8"
+java ${VM_OPTION_DEBUG} ${VM_OPTION_GC_LOG} ${VM_OPTION_GC_ALG} ${VM_OPTION_RUN}

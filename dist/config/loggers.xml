@@ -1,0 +1,17 @@
+<included>
+    <root level="INFO">
+        <appender-ref ref="EXTERNAL"/>
+    </root>
+    <logger name="me.mingxing5212" additivity="false">
+        <appender-ref ref="APP"/>
+    </logger>
+    <logger name="me.mingxing5212.chai-hens-merchant" level="DEBUG"/>
+
+    <logger name="me.mingxing5212.vapor.schedule" level="DEBUG">
+        <appender-ref ref="SCHEDULE_LOG"/>
+    </logger>
+    <logger name="org.quartz" level="DEBUG" additivity="false">
+        <appender-ref ref="SCHEDULE_LOG"/>
+    </logger>
+    <logger name="org.jooq" level="DEBUG"/>
+</included>

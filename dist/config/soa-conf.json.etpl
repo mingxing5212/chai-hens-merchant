@@ -1,0 +1,20 @@
+{
+  "commonConf": {
+    "registerUrl": "{{_ .ELE_SOA_REG_URL}}",
+    "configCenterUrl": "{{_ .ELE_ZK_URL}}",
+    "auth": "{{_ .ELE_ZK_AUTH}}",
+    "group": "stable",
+    "metricUrl": "{{_ .ELE_STATSD_URL}}"
+  },
+  "serverConf": {
+    "serviceName": "SampleSOAService",
+    "protocol": "json",
+    "port": 5031,
+    "threadPoolSize": 10,
+    "initializer": "me.mingxing5212.chai-hens-merchant.Application",
+    "interfaces": [
+    ]
+  },
+  "clientConfs": []
+}
+

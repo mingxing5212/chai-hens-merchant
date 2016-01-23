@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>me.mingxing5212</groupId>
+		<artifactId>chai-hens-merchant-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../chai-hens-merchant-parent/pom.xml</relativePath>
+	</parent>
+	<artifactId>chai-hens-merchant-service</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>me.mingxing5212</groupId>
+			<artifactId>chai-hens-merchant-data</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>me.mingxing5212</groupId>
+			<artifactId>chai-hens-merchant-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>jgeohash</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,27 @@
+chai-hens-merchant:
+  dataSource:
+    driverClassName: '{{_ .DATASOURCE_DRIVERCLASSNAME}}'
+    jdbcUrl: '{{_ .DATASOURCE_JDBCURL}}'
+    password: '{{_ .DATASOURCE_PASSWORD}}'
+    username: '{{_ .DATASOURCE_USERNAME}}'
+vapor:
+  scheduler:
+    enabled: '{{_ .SCHEDULER_ENABLED}}'
+    job:
+      pollingOrder:
+        fixedRate: '{{_ .SCHEDULER_JOB_POLLINGORDER_FIXEDRATE}}'
+      pollingOrderStatus:
+        fixedRate: '{{_ .SCHEDULER_JOB_POLLINGORDERSTATUS_FIXEDRATE}}'
+    threadCount: '{{_ .SCHEDULER_THREADCOUNT}}'
+    standby: '{{_ .SCHEDULER_STANDBY}}'
+  metric:
+    #是否启用监控
+    enabled: true
+    #Grafna系统要求的统一前缀，默认使用appid
+    prefix: me.mingxing5212.chai-hens-merchant
+    #statsd服务器地址
+    url: {{_ .ELE_STATSD_URL}}
+logging:
+  config: ./config/elog.xml
+management:
+  contextPath: /management
