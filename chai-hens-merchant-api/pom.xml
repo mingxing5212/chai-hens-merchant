@@ -10,5 +10,17 @@
 	<artifactId>chai-hens-merchant-api</artifactId>
 
 	<dependencies>
+		<dependency>
+			<groupId>me.mingxing5212</groupId>
+			<artifactId>chai-hens-merchant-service</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>me.mingxing5212</groupId>
+			<artifactId>chai-hens-merchant-data</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
 	</dependencies>
 </project>

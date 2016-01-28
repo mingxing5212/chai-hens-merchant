@@ -11,6 +11,10 @@
     <dependencies>
         <dependency>
             <groupId>me.mingxing5212</groupId>
+            <artifactId>chai-hens-merchant-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.mingxing5212</groupId>
             <artifactId>chai-hens-merchant-service</artifactId>
         </dependency>
         <!-- 使用嵌入式Jetty作为Web应用服务器 -->

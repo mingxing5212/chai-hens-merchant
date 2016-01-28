@@ -15,10 +15,6 @@
 			<artifactId>chai-hens-merchant-data</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>me.mingxing5212</groupId>
-			<artifactId>chai-hens-merchant-api</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
