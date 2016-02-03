@@ -30,6 +30,10 @@
         <mybatis-spring-version>1.2.3</mybatis-spring-version>
         <mtbatis-spring-boot-version>1.0.1-SNAPSHOT</mtbatis-spring-boot-version>
         <logback-version>1.1.3</logback-version>
+        <chai-hens-voucher-version>1.0-SNAPSHOT</chai-hens-voucher-version>
+        <dubbo-version>2.8.4</dubbo-version>
+        <zookeeper-version>3.4.6</zookeeper-version>
+        <zkclient-version>0.1</zkclient-version>
     </properties>
 
     <dependencyManagement>
@@ -53,6 +57,11 @@
                 <groupId>me.mingxing5212</groupId>
                 <artifactId>chai-hens-merchant-service</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>me.mingxing5212</groupId>
+                <artifactId>chai-hens-voucher-api</artifactId>
+                <version>${chai-hens-voucher-version}</version>
             </dependency>
             <!-- 三方工具包 -->
             <dependency>
@@ -200,6 +209,37 @@
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
                 <version>${logback-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo-version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>spring</artifactId>
+                        <groupId>org.springframework</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper-version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.github.sgroschupf</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

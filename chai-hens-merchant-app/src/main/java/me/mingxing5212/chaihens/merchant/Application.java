@@ -14,10 +14,12 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.velocity.VelocityAutoConfiguration;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication 
 @EnableAutoConfiguration(exclude = { VelocityAutoConfiguration.class })
 @MapperScan("me.mingxing5212.chaihens.merchant.data")
+@ImportResource({"classpath:dubbo-consumer.xml"})
 public class Application {
 
     public static void main(String[] args) {

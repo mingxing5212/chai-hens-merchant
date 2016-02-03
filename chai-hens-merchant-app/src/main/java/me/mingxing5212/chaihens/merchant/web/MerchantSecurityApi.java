@@ -1,4 +1,4 @@
-package me.mingxing5212.chaihens.merchant.api;
+package me.mingxing5212.chaihens.merchant.web;
 
 /**
  * MerchantSecurityApi

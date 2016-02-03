@@ -2,7 +2,7 @@ chaihens:
   merchant:
     web:
       #HTTP 监听端口
-      port: 8080
+      port: 8081
       #嵌入式Web服务器的线程池配置
       threadPool:
         maxThreads: 200
